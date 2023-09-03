@@ -20,10 +20,13 @@ const Todos = () => {
         {todos.map((todo, index) => (
           <React.Fragment key={index}>
             {edit && id === todo.id && (
-              <li style={{ margin: "0 auto" }}>
+              <li
+                className=" whitespace-nowrap  items-center  mx-0 flex justify-center xl:mx-6 lg:mx-0 md:mx-12 align-bottom"
+                style={{ margin: "0 auto", alignItems: "end" }}
+              >
                 <input
                   type="text"
-                  className="mt-5 mr-3 bg-gray-800 w-[87%]  rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  className="mt-5 mr-3 bg-gray-800 w-[87%] sm:w-[50%]  rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   placeholder="Update a Todo"
                   onChange={(e) => setUpdatedText(e.target.value)}
                 />
