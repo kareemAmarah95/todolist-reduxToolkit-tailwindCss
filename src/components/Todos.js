@@ -16,14 +16,14 @@ const Todos = () => {
 
   return (
     <>
-      <ul className="list-none">
+      <ul className="list-none w-[90%] mx-4 " style={{ margin: "0 auto" }}>
         {todos.map((todo, index) => (
           <React.Fragment key={index}>
             {edit && id === todo.id && (
-              <>
+              <li style={{ margin: "0 auto" }}>
                 <input
                   type="text"
-                  className="mt-5 mr-5 bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  className="mt-5 mr-3 bg-gray-800 w-[87%]  rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   placeholder="Update a Todo"
                   onChange={(e) => setUpdatedText(e.target.value)}
                 />
@@ -37,10 +37,10 @@ const Todos = () => {
                 >
                   Update Todo
                 </button>
-              </>
+              </li>
             )}
 
-            <li className="mt-4 mx-4 flex justify-between items-center bg-zinc-800 px-4 py-2 rounded">
+            <li className="mt-4 xl:mx-2 lg:mx-0 md:mx-0  flex justify-between items-center bg-zinc-800 px-4 py-2 rounded">
               <div className="text-white">{todo.text}</div>
               <div className="flex ">
                 <div className="text-white bg-red-500 border-0 py-1 px-4 focus:outline-none  rounded text-md mr-3">
